@@ -1,20 +1,18 @@
 ## Scientia's Page
 
-This is my webpage here you can find resources to some of my current projects or junk I've created/extracted. due to copyright reasons I'll encrypt them using certain keys only people who have the content **should** have
+This is my webpage here you can find resources to some of my current projects or junk I've created/extracted. due to copyright reasons I'll encrypt some of them using certain keys only people who have the content **should** have
 
-### unused
+### projects
 
-placeholder 2
+current projects
 
 ```
 code block
 ```
 
 
-### how
+### shared files
 
-why
 
-### where
-when
-[test](/data/codenames.html)
+### misc links
+[Nintendo Console Codenames](/data/codenames.html)
