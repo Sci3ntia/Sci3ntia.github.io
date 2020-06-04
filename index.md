@@ -1,6 +1,6 @@
 ## Scientia's Page
 
-placehoder
+placeholder
 
 ### funny joke
 
