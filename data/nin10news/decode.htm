@@ -1018,7 +1018,7 @@ function encodeData(){
 	var encodedString = CryptoJS.AES.encrypt(encryptText,"/");
 	jQuery('#encodedResult').val(encodedString);
 }			
-var i = 15;
+var i = 0;
 var myTimer;
 function decodeData(){  
 	document.getElementById("loadingCircle").style.display = "block";
