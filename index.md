@@ -16,3 +16,4 @@ code block
 
 ### misc links
 [Nintendo Console Codenames](/data/codenames.html)
+[Image Steganography](/data/steganography.html)
