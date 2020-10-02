@@ -1,0 +1,310 @@
+button,
+input[type=submit],
+input[type=text],
+textarea {
+    border: 1px solid var(--box-background);
+    background: var(--box-background);
+    color: var(--text);
+    padding: 4px 16px;
+    box-sizing: border-box;
+}
+
+button,
+input[type=submit] {
+    box-shadow: 3px 3px var(--background-transparent);
+}
+
+button,
+input[type=submit] {
+    transition: transform .1s, opacity .2s;
+}
+}
+
+button:hover,
+input[type=submit]:hover {
+    background-image: linear-gradient(145deg, #0000, #0000, #fff4, #0000, #0000);
+    background-size: 300% 100%;
+    background-position: -30%;
+
+}
+
+button:active,
+input[type=submit]:active {
+    box-shadow: none;
+    transform: translateX(2px) translateY(2px);
+    opacity: .8;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea:focus {
+    border-color: var(--box-background-noblur);
+    border-width: 2px;
+}
+
+textarea {
+    padding: 4px;
+}
+
+/* Links */
+#hSub a,
+#hUp a{
+    color: var(--text) !important;
+}
+
+a:not(.logo),
+.boxButton { 
+    outline: 0;
+    color: var(--link) !important;
+    text-decoration: none;
+}
+
+a:not(.logo):hover,
+.boxButton:hover {
+    text-decoration: underline !important;
+}
+
+a:not(.logo):visited {
+    color: var(--link-visited);
+}
+
+a:not(.logo):active,
+.boxButton:active {
+    color: var(--link-active) !important;
+}
+
+.boxHead,
+.rightHead,
+body:not(.blogBody) .blogs > div:first-child b {
+    text-align: center;
+    background-color: var(--box-header);
+    color: var(--text);
+    padding: 10px 0;
+    font-weight: normal;
+    width: 100%;
+    display: block;
+}
+
+.box.fwiends .fwiendCounter,
+#viewFriends {
+    padding: 0 4px;
+}
+
+#form {
+    margin-top: 20px;
+}
+
+.box.blurbs {
+    padding-bottom: 4px;
+}
+
+.box.blurbs h4,
+body:not(.blogBody) .blogs div:not(:first-child) {
+    margin-left: 4px;
+}
+
+#about,
+#who {
+    margin-left: 8px;
+}
+
+.box.blurbs,
+.box.boxInfo,
+.box.url,
+.box.player,
+.box.fwiends,
+.box.extended,
+#form,
+.blogCard,
+.blog,
+#userWall {
+    color: var(--text);
+    background-color: var(--box-background);
+    border: 10px solid var(--box-background);
+    box-shadow: 3px 3px var(--background-transparent);
+    backdrop-filter: blur(var(--blur-radius));
+}
+
+.player.box audio {
+    opacity: .7;
+    filter: none;
+}
+
+#footer,
+.box.comments > div:last-child {
+    color: var(--text);
+}
+
+.blogPost,
+.blogTitle {
+    padding: 0;
+}
+
+.tableLeft,
+.tableRight {
+    background-color: #7775;
+}
+
+.blogBody .blog {
+    padding: 8px;
+}
+    
+    @supports not (backdrop-filter: blur()) {
+        .box.blurbs,
+        .box.boxInfo,
+        .box.url,
+        .box.player,
+        .box.fwiends,
+        .box.extended,
+        #form,
+        .blogCard,
+        .blog,
+        #userWall {
+            position: relative;
+            backdrop-filter: none;
+        }
+
+        .box.blurbs::before,
+        .box.boxInfo::before,
+        .box.url::before,
+        .box.player::before,
+        .box.fwiends::before,
+        .box.extended::before,
+        #form::before,
+        .blogCard::before,
+        .blog::before,
+        #userWall::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: var(--page-background);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            filter: blur(var(--blur-radius)) brightness(.8);
+        }
+    }
+}
+
+.box.url {
+    text-align: center;
+    padding: 8px;
+}
+
+img[src$="download.svg"] {
+    filter: invert();
+}
+
+#form form {
+    margin-bottom: 0;
+}
+
+#form input[type=submit]:focus,
+#userWall button[onclick*=delete]:focus {
+    opacity: .5;
+}
+
+#form input[type=submit] {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+#commentInput {
+    margin-right: 6px;
+    width: calc(100% - 12px);
+}
+
+.box.comments > .boxHead {
+    margin-top: 12px;
+}
+
+/* Codeblocks */
+pre {
+    background-color: var(--box-background);
+    padding: 8px;
+    border: 1px solid var(--box-background);
+    white-space: pre-wrap;
+}
+
+.blogBody pre {
+    margin: 4px 24px;
+}
+
+/* Button tweaking */
+#userWall .tableRight {
+    position: relative;
+}
+
+#userWall button[onclick*=delete] {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    text-transform: capitalize;
+    background-color: #f228;
+}
+
+button[onclick*=mp3] {
+    background-color: #22f8;
+}
+
+/* No-reload buttons */
+
+.box.boxInfo a:active {
+    pointer-events: none;
+}
+
+@keyframes rq_send {
+    0% {
+       background-image: var(--uri-friend-add);  
+    }
+}
+
+.box.boxInfo a[href*=invitation]:focus {
+    animation: rq_send .1s linear;
+}
+
+@keyframes req_blank {
+    20% {
+        font-size: 0;
+    }
+}
+
+.box.boxInfo a[href*=invitation]:focus div {
+    font-size: 0;
+    animation: req_blank 3s linear;
+}
+
+@keyframes req_sent {
+    20% {
+        content: "Request sent!";
+    }
+}
+
+.box.boxInfo a[href*=invitation]:focus div::after {
+    content: "";
+    animation: req_sent 3s linear;
+    font-size: small;
+}
+
+:root {
+    
+
+    --box-background: #1119;
+    --box-background-noblur: #1119;
+    --box-header: #1119;
+}
+
+#header, #hSub {
+    font-family: sans-serif !important;
+    position: absolute !important;
+    background-color: #222 !important;
+    border-color: #fff1 !important;
+    color: #3 !important;
+}
